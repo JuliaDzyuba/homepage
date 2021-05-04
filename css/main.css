@@ -10,7 +10,7 @@ main {
 
 @keyframes bganim {
   0% {
-      background-image: linear-gradient(25deg, rgba(100, 218, 218, 0.3) 50%, rgba(151, 120, 143, 0.3) 100%);
+    background-image: linear-gradient(25deg, rgba(100, 218, 218, 0.3) 50%, rgba(151, 120, 143, 0.3) 100%);
   }
   33% {
     background-image: linear-gradient(25deg, rgba(252, 86, 188, 0.788) 15%, rgba(100,255,254,0.3) 100%);
@@ -26,6 +26,50 @@ main {
 }
 
 .page {
-  /* border: 13px outset rgba(180,10,157,0.92); */
   border-color: rgba(255, 96, 234, 0.92);
 }
+
+.likes{
+  position: relative;
+}
+
+.elon {
+  border: none;
+  background-color: rgba(255, 1, 1, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 12px 5px rgba(255, 1, 1, 0.5);
+  top: 1rem;
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+}
+.modal-content p {
+  margin-top: 15px;
+}
+
+.btn-close {
+  position: absolute;
+  padding: 5px;
+  right: 0;
+  top: 0;
+  font-size: 2rem;
+  color: grey;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+

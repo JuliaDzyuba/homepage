@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,7 +22,7 @@
               <div class="three wide center aligned column">
                 <div class="avatar-wrapper">
                   <img class="avatar" src="https://izilike.net/themes/pergo/assets/images/xgirl_and_desk.png.pagespeed.ic.3Auc9Lo_Z9.png" alt="My profile picture">
-                  <!-- <object class="avatar" data="./assets/images/avatar.svg" role="img" aria-label="My profile picture"></object> -->
+                  
                 </div>
               </div>
               <div class="thirteen wide column">
@@ -204,6 +204,9 @@
 										<p><strong>Born</strong> in <strong>Dnipro, Ukraine</strong></p>
 									</li>
                 </ul>
+                <div class="secret">
+
+                </div>
               </div>
               <div class="six wide column">
                 <section>
@@ -224,11 +227,34 @@
                     RESPONSIBLE, SELF-ORGANIZED, SOCIABLE, ATTENTIVE, GOAL-ORIENTED, CONSISTENT, PERFECTIONIST
                   </p>
                 </section>
-                <section>
+                <section class="likes">
                   <h3>Likes&#x1f603;</h3>
-                  <p class="tags small">FRONTEND, SUN, SPRING, CHOCOLATE, <span class="nowrap">BEAUTIFUL MUSIC,</span> <span class="nowrap">EAT DELICIOUS FOOD,</span> SELF-EDUCATION, 
+                  <p class="tags small">FRONTEND, SUN, SPRING, CHOCOLATE, FLOWERS 
+                    <span class="nowrap">BEAUTIFUL MUSIC,</span> 
+                    <button class="elon">ELON MUSK</button> ,
+                    <span class="nowrap">EAT DELICIOUS FOOD,</span> SELF-EDUCATION, 
                     <span class="nowrap">ATTENTION TO DETAILS</span>
+                    
                   </p>
+                  <div class="modal hide">
+                    
+                    <div class="modal-content">
+                      <span class="btn-close">×</span>
+                      <p><strong>Do you know Elon?</strong></p>
+                      <p>
+                        Of course you know! He is a public man.
+                        <br> 
+                        😍 And Elon Musk is my idol.
+                        <br>
+                        A person who lives one step ahead of everyone. A person who can come up with an idea out of a joke and do incredible things.
+                        <br>
+                        Elon talks about one of them in an interview with <a href="https://youtu.be/ycPr5-27vSI">Joe Rogan Experience # 1169 - Elon Musk</a> . 
+                      </p>
+                      <iframe width="100%" height="auto" class="video" src="https://www.youtube.com/embed/ycPr5-27vSI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <p>It's amazing! I was delighted! I invite you to watch it. </p>
+                      <strong>Good luck and have fun</strong>
+                    </div>
+                  </div>
                 </section>
                 <section>
                   <h3>Dislikes&#x1f61e;</h3>
@@ -236,7 +262,7 @@
                   </p>
                 </section>
                 <section>
-                  <h3>Wants&#x1f97a;</h3>
+                  <h3>Wants 😍</h3>
                   <p class="tags small bulleted">
                     <span class="tag">TO BE HAPPY</span>
                     <span class="tag">TO BE HEALTHY</span>
@@ -257,7 +283,7 @@
                           <a href="#" rel="external"><strong>ENGLISH</strong></a>
                         </span>
                         <span class="tag">
-                          <a href="" rel="external"><strong>Binary Studio Academy</strong></a>
+                          <a href="https://binary-studio.com" rel="external"><strong>Binary Studio Academy</strong></a>
                         </span>
                         <span class="tag">
                           <a href="http://javascriptkicks.com/" rel="external"><strong>JSK</strong></a>
@@ -292,7 +318,7 @@
                     </li>
                     <li>
                       <div><em>January - December 2009</em></div>
-                      <div><strong>English course</strong> at <a href="#"  rel="external"><strong>AES, Dnipro</strong></a></div>
+                      <div><strong>English course</strong> at <a href="https://americanenglish.ua/"  rel="external"><strong>AES, Dnipro</strong></a></div>
                     </li>
                     <li>
                       <div><em>September 2003 – July 2005</em></div>
@@ -307,12 +333,34 @@
                     
                   </ul>
                 </section>
-                <!-- Articles -->
+                
               </div>
             </div>
           </div>
         </div>
       </article>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const elon = document.querySelector('.elon');
+        const modal = document.querySelector('.modal');
+        const btnClose = document.querySelector('.btn-close');
+        const iframeVideo = document.querySelectorAll('.video');        
+        
+        elon.addEventListener('click', () => {
+          modal.classList.remove('hide');          
+        });
+        
+        btnClose.addEventListener('click', () => {
+          modal.classList.add('hide');
+          iframeVideo.forEach(i => {
+              let source = i.src;
+              i.src = '';
+              i.src = source;
+          });
+        });
+      });
+    </script>
   </body>
 </html>

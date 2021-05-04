@@ -5,23 +5,24 @@ main {
   background-position: center;
   animation-name: bganim;
   animation-duration: 10s;
-	animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 @keyframes bganim {
   0% {
     background-image: linear-gradient(25deg, rgba(100, 218, 218, 0.3) 50%, rgba(151, 120, 143, 0.3) 100%);
   }
+
   33% {
-    background-image: linear-gradient(25deg, rgba(252, 86, 188, 0.788) 15%, rgba(100,255,254,0.3) 100%);
+    background-image: linear-gradient(25deg, rgba(252, 86, 188, 0.788) 15%, rgba(100, 255, 254, 0.3) 100%);
   }
-  
+
   66% {
     background-image: linear-gradient(25deg, rgba(182, 96, 25, 0.3) 50%, rgba(252, 86, 188, 0.788) 100%);
   }
-  
+
   100% {
-    background-image: linear-gradient(25deg, rgba(100,255,254,0.3) 50%, rgba(255,10,204,0.3) 100%);
+    background-image: linear-gradient(25deg, rgba(100, 255, 254, 0.3) 50%, rgba(255, 10, 204, 0.3) 100%);
   }
 }
 
@@ -29,7 +30,7 @@ main {
   border-color: rgba(255, 96, 234, 0.92);
 }
 
-.likes{
+.likes {
   position: relative;
 }
 
@@ -40,11 +41,10 @@ main {
   cursor: pointer;
 }
 
-.modal{
+.modal {
   position: absolute;
   z-index: 10;
   width: 100%;
-  
   background-color: #fff;
   border: none;
   box-shadow: 0 0 12px 5px rgba(255, 1, 1, 0.5);
@@ -55,6 +55,7 @@ main {
   position: relative;
   padding: 20px;
 }
+
 .modal-content p {
   margin-top: 15px;
 }
@@ -73,3 +74,8 @@ main {
   display: none;
 }
 
+.video {
+  border: 0;
+  width: 100%;
+  height: auto;
+}
